@@ -1,0 +1,86 @@
+:root {
+   font-size: 100%; /* здесь установливается размер шрифта */
+}
+
+*, :after, :before {
+   box-sizing: border-box;
+}
+
+a {
+   text-decoration: none;
+   color: white;
+}
+
+.absolute {
+   position: absolute;
+}
+
+.fixed {
+   position: fixed;
+}
+
+.sticky {
+   position: sticky;
+}
+
+body {
+   background-color: white;
+   color: white;
+   margin: 0;
+   overflow-x: hidden;
+}
+
+/* scrollbars fix */
+::-webkit-scrollbar {
+    width: 0px;
+}
+html {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+
+/*       INTRO  */
+
+.intro {
+   width: 100%;
+   height: 1080px;
+   background-color: #262626;
+   font-family: 'Open Sans', sans-serif;
+}
+
+.intro__bg {
+   position: absolute;
+   width: 2916px;
+   height: 1079px;
+   left: -191px;
+   opacity: 0.56;
+   object-fit: cover;
+}
+
+
+/*       TITLE  */
+
+.intro__title {
+   position: absolute;
+   top: 400px;
+   left: 133px;
+   width: 1127px;
+   padding: 0 9px 0 27px;
+}
+
+.intro__title-head > h1, .intro__title-head > span {
+   font-size: 96px;
+   font-weight: bold;
+   line-height: 134px;
+}
+
+.intro__title-head > h1 {
+   margin: 0;
+}
+
+.intro__title-text {
+   font-size: 25px;
+   line-height: 51px;
+   margin-top: 32px;
+}
