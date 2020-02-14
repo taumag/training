@@ -63,24 +63,30 @@ html {
 
 .intro__title {
    position: absolute;
-   top: 400px;
-   left: 133px;
-   width: 1127px;
+   top: 20.83vw;
+   left: 6.93vw;
+   width: 58.7vw;
    padding: 0 9px 0 27px;
 }
 
-.intro__title-head > h1, .intro__title-head > span {
-   font-size: 96px;
+.intro__title-head > h1{
+   font-size: calc(20px + 3.96vw);
    font-weight: bold;
-   line-height: 134px;
+   line-height: calc(20px + 5.94vw);
+
 }
 
 .intro__title-head > h1 {
    margin: 0;
+   color: #FFCB05;
+}
+
+.intro__title-head > h1> span {
+   color: #fff;
 }
 
 .intro__title-text {
    font-size: 25px;
-   line-height: 51px;
+   line-height: calc(25px + 1.35vw);
    margin-top: 32px;
 }
