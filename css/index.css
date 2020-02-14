@@ -1,5 +1,5 @@
 :root {
-   font-size: 100%; /* здесь установливается размер шрифта */
+   font-size: 100%;
 }
 
 *, :after, :before {
@@ -44,7 +44,7 @@ html {
 @font-face {
    font-family: 'GothamBold';
    font-style: bold;
-   src: url(./fonts/GothamBold.otf);
+   src: url(./../fonts/GothamBold.otf);
 }
 
 
