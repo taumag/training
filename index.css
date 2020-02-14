@@ -37,6 +37,12 @@ html {
     scrollbar-width: none;
 }
 
+@font-face {
+   font-family: 'GothamBold';
+   font-style: bold;
+   src: url(./fonts/GothamBold.otf);
+}
+
 
 /*       INTRO  */
 
