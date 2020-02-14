@@ -22,6 +22,10 @@ a {
    position: sticky;
 }
 
+.invert {
+   filter: invert(1);
+}
+
 body {
    color: white;
    margin: 0;
