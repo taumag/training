@@ -30,6 +30,7 @@ body {
    color: white;
    margin: 0;
    overflow-x: hidden;
+   font-family: 'Open Sans', sans-serif;
 }
 
 /* scrollbars fix */
@@ -43,7 +44,7 @@ html {
 
 @font-face {
    font-family: 'GothamBold';
-   font-style: bold;
+   font-weight: bold;
    src: url(./../fonts/GothamBold.otf);
 }
 
