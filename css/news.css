@@ -42,10 +42,16 @@
 }
 
 .news-card__img {
+   position: relative;
    object-fit: cover;
-   width: 560px;
-   height: 390px;
+   width: 100%;
+   height: 100%;
    filter: brightness(70%);
+   transition: all .5s;
+}
+.news-card__img:hover {
+   transform: scale(1.125);
+   filter: brightness(100%);
 }
 
 .news-card__title {

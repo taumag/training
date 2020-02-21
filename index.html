@@ -10,11 +10,11 @@
    <link rel="stylesheet" href="./css/index.css">
    <link rel="stylesheet" href="./css/header.css">
    <link rel="stylesheet" href="./css/main.css">
-   <link rel="stylesheet" href="./css/footer.css">
    <link rel="stylesheet" href="./css/about_us2.css">
    <link rel="stylesheet" href="./css/map.css">
    <link rel="stylesheet" href="./css/news.css">
-
+   <link rel="stylesheet" href="./css/reqform.css">
+   <link rel="stylesheet" href="./css/footer.css">
 </head>
 <body>
    <div class="intro">
@@ -178,6 +178,50 @@
                </p>
             </div>
          </div>
+      </section>
+
+      <section class="reqform">
+         <h2 class="reqform__title">Request More Information</h2>
+         <form class="reqform__form" action="" method="post">
+
+            <div class="reqform__field reqform__field_100">
+               <input class="reqform__input" id="name" type="text" placeholder="Name">
+               <!-- <label class="" for="name">Name</label> -->
+            </div>
+
+            <div class="reqform__field reqform__field_50">
+               <input class="reqform__input" id="company" type="text" placeholder="Company">
+            </div>
+
+            <div class="reqform__field reqform__field_50 reqform__field_offset align-right">
+               <select class="reqform__input" name="" id="name">
+                  <option>Business Segment</option>
+                  <option>Business Segment</option>
+               </select>
+            </div>
+
+            <div class="reqform__field reqform__field_50">
+               <input class="reqform__input" id="company" type="email" placeholder="Email">
+            </div>
+
+            <div class="reqform__field reqform__field_50 reqform__field_offset">
+               <input class="reqform__input" id="name" type="tel" placeholder="Phone number">
+            </div>
+
+            <div class="reqform__field reqform__field_100">
+               <input class="reqform__input" id="name" type="text" placeholder="Комментарий">
+               <!-- <label class="" for="name">Name</label> -->
+            </div>
+
+            <div class="reqform__field reqform__field_50 clear-border">
+               <input class="reqform__checkbox-box" id="checkbox" type="checkbox">
+               <label class="reqform__checkbox-label" for="checkbox">I give consent for my personal data to be processed</label>
+            </div>
+
+            <div class="reqform__field align-right clear-border">
+               <button type="submit">SEND</button>
+            </div>
+         </form>
       </section>
    </main>
 
