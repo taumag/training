@@ -1,0 +1,15 @@
+
+.map {
+   height: 780px;
+   width: 100%;
+   background-color: darkslategrey;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.map > p {
+   font-size: 120px;
+   margin: 0 auto;
+
+}

@@ -48,6 +48,12 @@ html {
    src: url(./../fonts/GothamBold.otf);
 }
 
+@font-face {
+   font-family: 'TTFirsNeue';
+   font-weight: normal;
+   src: url(./../fonts/TTFirsNeue.otf);
+}
+
 
 /*       INTRO  */
 
