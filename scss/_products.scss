@@ -1,0 +1,61 @@
+.toolz {
+   height: 760px;
+   width: 100%;
+   display: flex;
+   color: $contrColor-2;
+
+   &__card {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      background-color: $contrColor-1;
+   }
+   &__card:nth-child(2) {
+      border: 1px solid grey;
+   }
+   &__card > img {
+      position: absolute;
+      right: 0;
+   }
+
+   &__head {
+      position: absolute;
+      margin: 60px;
+      width: 360px;
+      font-family: GothamBold;
+      font-size: 36px;
+      line-height: 43px;
+   }
+
+   &__card-list {
+      list-style-type: '—';
+      position: absolute;
+      margin-top: 145px;
+      margin-left: 35px;
+   }
+
+   &__card-text {
+      padding: 10px 20px;
+      font-size: 12px;
+      font-weight: bold;
+      line-height: 22px;
+      text-transform: uppercase;
+   }
+
+   &__card-text > a {
+      color: $contrColor-2;
+   }
+
+   &__container_learn-more {
+      position: absolute;
+      bottom: 30px;
+      left: 60px;
+   }
+
+   &__learn-more {
+      
+   }
+}
+
+
+

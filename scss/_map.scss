@@ -6,10 +6,9 @@
    display: flex;
    justify-content: center;
    align-items: center;
-}
 
-.map > p {
+   & > p {
    font-size: 120px;
    margin: 0 auto;
-
+   }
 }

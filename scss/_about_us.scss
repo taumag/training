@@ -1,0 +1,50 @@
+/*          ABOUT US       */
+
+.about-us {
+   width: 1280px;
+   height: 280px;
+   margin: 118px 320px 146px 320px;
+
+   &__about-us-head {
+      margin-left: -160px;
+      font-size: 18px;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      line-height: 37px;
+   }
+
+   &__about-us-text {
+      font-size: 25px;
+      line-height: 51px;
+      margin: 54px 0;
+   }
+
+   &__container_learn-more {
+      margin-top: -5px; /* декор */
+   }
+}
+
+/*          LEARN MORE Component      */
+
+.learn-more {
+   font-weight: bold;
+   font-size: 12px;
+   line-height: 16px;
+   text-transform: uppercase;
+   color: $contrColor-1;
+
+   &:after {
+      display: inline-block;
+      visibility: hidden;
+      width: 8px;
+      height: 11px;
+      content: '';
+      background: url('./../img/small_array.svg');
+      transition: all .5s ease;
+   }
+   &:hover:after {
+      visibility: visible;
+      transform: translateX(20px);
+   }
+}
+

@@ -1,0 +1,46 @@
+.absolute {
+   position: absolute;
+}
+
+.fixed {
+   position: fixed;
+}
+
+.sticky {
+   position: sticky;
+}
+
+.invert {
+   filter: invert(1);
+}
+
+.align-right {
+   text-align: end;
+}
+
+/* scrollbars fixes */
+::-webkit-scrollbar {
+   width: 0px;
+}
+html {
+   -ms-overflow-style: none;  // MS
+   scrollbar-width: none;     // Firefox
+}
+
+body {
+   // color: white;
+   overflow-x: hidden;
+   font-family: 'Open Sans', sans-serif;
+}
+
+@font-face {
+   font-family: 'GothamBold';
+   font-weight: bold;
+   src: url(./../fonts/GothamBold.otf);
+}
+
+@font-face {
+   font-family: 'TTFirsNeue';
+   font-weight: normal;
+   src: url(./../fonts/TTFirsNeue.otf);
+}

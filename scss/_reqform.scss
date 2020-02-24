@@ -1,0 +1,87 @@
+.reqform {
+   width: 1600px;
+   height: 827px;
+   margin: 5px 160px 180px;
+   padding: 80px 160px;
+   color: $txtColor;
+
+   &__title {
+      font-size: 45px;
+      line-height: 63px;
+      margin: 0 0 90px;
+   }
+
+   &__form {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      font-size: 18px;
+      line-height: 39px;
+   }
+
+   &__field {
+      position: relative;
+      border-bottom: 2px solid $txtColor;
+      margin-bottom: 65px;
+   }
+   .clear-border {
+      border-bottom: none;
+   }
+   &__field_100 {
+      flex-basis: 100%;
+      max-width: 100%;
+   }
+   &__field_50 {
+      flex-basis: 46.87%;
+      max-width: 46.87%;
+   }
+   &__field_offset {
+      margin-left: 80px;
+   }
+   &__field_active {
+      border-color: $mainColor1;
+   }
+   &__field_error {
+      border-color: #FF1F00;
+   }
+
+   &__input {
+      border: none;
+      color: $txtColor;
+      padding-bottom: 20px;
+      width: 100%;
+   }
+
+   &__field > label {
+      position: absolute;
+      left: 2px;
+      color: rgba($txtColor, 0.6);
+   }
+
+   &__checkbox-box {
+      margin-right: 15px;
+   }
+
+   &__checkbox-label {
+      position: initial !important;
+      font-size: 14px;
+      line-height: 31px;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+   }
+
+   &__form button {
+      width: 200px;
+      height: 60px;
+      font-size: 18px;
+      line-height: 25px;
+      text-align: center;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      border: 2px solid $txtColor;
+      background-color: transparent;
+
+      margin-top: -10px; /* FIX position */
+   }
+
+}
