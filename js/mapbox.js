@@ -1,11 +1,27 @@
 if (document.readyState !== 'complete') window.addEventListener('load', OnLoad);
+else OnLoad();
+
+const worldCenter = {
+   coord: [10, 42],
+   zoom: 2
+};
+const russiaCenter = {
+   coord: [85, 62],
+   zoom: 3.5
+};
+
+const mapCustomText = document.querySelector('.map__custom-text');
 
 function OnLoad() {
    mapboxgl.accessToken = 'pk.eyJ1Ijoia255YXpldmluYyIsImEiOiJjazczZ3ZqamswYnliM2VudjhtbzBsZW93In0.75DLLPt_GyViArLzf7iU9g';
+   
    const map = new mapboxgl.Map({
       container: 'mapbox',
-      style: 'mapbox://styles/mapbox/dark-v10'
+      style: 'mapbox://styles/mapbox/dark-v10',
+      center: worldCenter.coord,
+      zoom: worldCenter.zoom
    });
+   // map.scrollZoom.disable();
 
    let locator = new mapboxgl.GeolocateControl({
       positionOptions: {
@@ -15,9 +31,12 @@ function OnLoad() {
       showUserLocation: false,
       fitBoundsOptions: { maxZoom: 13 }
    });
-   // Add geolocate control to the map.
-   // map.addControl(locator);
 
+   // Add geolocate control to the map.
+   map.addControl(locator);
+   // locator.trigger();
+
+   // точки на карте
    const Points = [
       [-52, -4],
       [-79, 34],
@@ -32,11 +51,12 @@ function OnLoad() {
       [148, -22]
     ];
 
-   // Далее идёт гигантский кусок кода, который лишь анимирует иконки на карте 0_о
+
+// Далее идёт гигантский кусок кода, который лишь анимирует иконки на карте 0_о
    var size = 100;
    // implementation of CustomLayerInterface to draw a pulsing dot icon on the map
    // see https://docs.mapbox.com/mapbox-gl-js/api/#customlayerinterface for more info
-   var pulsingDot = {
+   const pulsingDot = {
       width: size,
       height: size,
       data: new Uint8Array(size * size * 4),
@@ -81,9 +101,9 @@ function OnLoad() {
             Math.PI * 2
          );
          context.fillStyle = 'rgba(255, 203, 5, 0.6)';
+         context.fill();
          // context.strokeStyle = '#FFCB05';
          // context.lineWidth = 2 + 4 * (1 - t);
-         context.fill();
          // context.stroke();
 
          // update this image's data with data from the canvas
@@ -102,12 +122,9 @@ function OnLoad() {
       }
    };
 
-   // map.on('load', () => {
-   //    // locator.trigger();
-
-   // });
 
    map.on('load', function () {
+
       map.addImage('pulsing-dot', pulsingDot, { pixelRatio: 2 });
 
       map.addSource('points', {
@@ -118,6 +135,7 @@ function OnLoad() {
          }
 
       });
+
       map.addLayer({
          'id': 'points',
          'type': 'symbol',
@@ -129,22 +147,54 @@ function OnLoad() {
       });
    });
 
-   // Добавляем центрирование по клику
-   // Center the map on the coordinates of any clicked symbol from the 'symbols' layer.
-   map.on('click', 'points', function (e) {
-      map.flyTo({ 
-         center: e.features[0].geometry.coordinates,
-         zoom: 5
+
+   document.querySelector('#mapbox').addEventListener('click', function (e) {
+
+      // скрыть все левые надписи по клику на любой части карты
+      mapCustomText.classList.add('hide');
+
+      // Добавляем центрирование по клику
+      // Center the map on the coordinates of any clicked symbol from the 'symbols' layer.
+      map.on('click', 'points', function (e) {
+         map.flyTo({
+            center: e.features[0].geometry.coordinates,
+            zoom: 5
+         });
       });
+
+      // включить попапы
+      Popup(map);
    });
 
+
+   // вешаем обработчики на кнопки
+   document.querySelector('.map-world').addEventListener('click', () => {
+      map.flyTo({
+         center: worldCenter.coord,
+         zoom: worldCenter.zoom
+      });
+      mapCustomText.classList.remove('hide');
+   });
+
+   document.querySelector('.map-russia').addEventListener('click', () => {
+      map.flyTo({
+         center: russiaCenter.coord,
+         zoom: russiaCenter.zoom
+      });
+      mapCustomText.classList.add('hide');
+   });
+
+}
+
+function Popup(map) {
+   
    // прикручивем попап
    let popup = new mapboxgl.Popup({
       closeButton: false,
       closeOnClick: false
    });
 
-   map.on('mouseenter', 'points', function (e) {
+   map.on('mouseenter', 'points', e => {
       // Change the cursor style as a UI indicator.
       map.getCanvas().style.cursor = 'pointer';
 
@@ -166,7 +216,7 @@ function OnLoad() {
          .addTo(map);
    });
 
-   map.on('mouseleave', 'points', function () {
+   map.on('mouseleave', 'points', () => {
       map.getCanvas().style.cursor = '';
       popup.remove();
    });
@@ -181,9 +231,9 @@ function CreateFeaturesArray(data) {
       "руду",
       "уголь",
       "золото",
-      "подземный эль",
+      "нихуя в промышленных масштабах",
       "нефть",
-      "хз что и хз зачем",
+      "вакуум",
       "бурду",
       "печеньки :)",
       "анобтаниум",

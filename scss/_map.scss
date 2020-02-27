@@ -1,7 +1,84 @@
 
 .map {
+   position: relative;
    height: 780px;
    width: 100%;
+   background-color: $txtColor;
+
+   &__switcher {
+      width: 100%;
+      height: 30px;
+      position: absolute;
+      top: 0;
+
+      display: flex;
+      justify-content: center;
+      color: #fff;
+   }
+
+   &__link {
+      font-weight: bold;
+      font-size: 16px;
+      margin: 72px 28px 0;
+      opacity: .5;
+
+      &:hover {
+         opacity: .7;
+      }
+   }
+
+   &__custom-text {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 200px;
+      width: 1200px;
+      margin-left: 321px;
+      margin-top: 288px;
+      transition-property: opacity, visibility;
+      transition-duration: .8s;
+      z-index: 9999;
+      display: flex;
+      flex-flow: column wrap;
+      color: #fff;
+   }
+
+   &__head {
+      // position: absolute;
+      left: 321px;
+      top: 288px;
+
+      font-size: 45px;
+      line-height: 63px;
+
+      > span {
+         color: $mainColor1;
+      }
+   }
+
+   &__container_learn-more {
+      margin-top: 40px;
+   }
+
+   &__wrapper-right {
+      width: 560px;
+      margin: 20px 340px;
+      padding-left: 80px;
+      padding-bottom: 15px;
+      border-left: 2px solid $mainColor1;
+   }
+
+   &__head2 {
+      font-size: 24px;
+      line-height: 52px;
+      margin-bottom: 5px;
+      margin-top: -10px;
+   }
+
+   &__description {
+      line-height: 40px;
+
+   }
 }
 
 #mapbox {

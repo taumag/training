@@ -9,6 +9,7 @@
 
 a {
   text-decoration: none;
+  cursor: pointer;
 }
 
 html,
@@ -67,6 +68,38 @@ img {
 
 .margin-left-auto {
   margin-left: auto;
+}
+
+.hide {
+  opacity: 0;
+  visibility: hidden;
+}
+
+/*             LINK           */
+.link {
+  transition: all 0.5s;
+}
+.link:after {
+  content: "";
+  display: block;
+  /* This will put the pseudo element on its own line. */
+  margin: 0 auto;
+  /* This will center the border. */
+  width: 0%;
+  /* Change this to whatever width you want. */
+  padding-top: 2px;
+  /* This creates some space between the element and the border. */
+  border-bottom: 2px solid #fff;
+  transition: width 0.3s;
+}
+.link:hover:after {
+  width: 100%;
+}
+.link_active {
+  opacity: 1 !important;
+}
+.link_active:after {
+  width: 100%;
 }
 
 /* scrollbars fixes */
@@ -374,8 +407,71 @@ body {
 }
 
 .map {
+  position: relative;
   height: 780px;
   width: 100%;
+  background-color: #000;
+}
+.map__switcher {
+  width: 100%;
+  height: 30px;
+  position: absolute;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  color: #fff;
+}
+.map__link {
+  font-weight: bold;
+  font-size: 16px;
+  margin: 72px 28px 0;
+  opacity: 0.5;
+}
+.map__link:hover {
+  opacity: 0.7;
+}
+.map__custom-text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 200px;
+  width: 1200px;
+  margin-left: 321px;
+  margin-top: 288px;
+  transition-property: opacity, visibility;
+  transition-duration: 0.8s;
+  z-index: 9999;
+  display: flex;
+  flex-flow: column wrap;
+  color: #fff;
+}
+.map__head {
+  left: 321px;
+  top: 288px;
+  font-size: 45px;
+  line-height: 63px;
+}
+.map__head > span {
+  color: #FFCB05;
+}
+.map__container_learn-more {
+  margin-top: 40px;
+}
+.map__wrapper-right {
+  width: 560px;
+  margin: 20px 340px;
+  padding-left: 80px;
+  padding-bottom: 15px;
+  border-left: 2px solid #FFCB05;
+}
+.map__head2 {
+  font-size: 24px;
+  line-height: 52px;
+  margin-bottom: 5px;
+  margin-top: -10px;
+}
+.map__description {
+  line-height: 40px;
 }
 
 #mapbox {
