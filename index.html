@@ -8,6 +8,7 @@
 
    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap&subset=cyrillic">
    <link rel="stylesheet" href="./css/main.css">
+   <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
    <link href='https://api.mapbox.com/mapbox-gl-js/v1.8.0/mapbox-gl.css' rel='stylesheet' />
 </head>
 <body>
@@ -156,42 +157,71 @@
 
       <section class="news">
          <h2 class="news__title">Новости</h2>
-         <div class="news__wrapper">
-            <div class="news__card">
-               <div class="news-card__date">18 апреля 2019</div>
-               <div class="news-card__img-wrapper">
-                  <img src="./img/news_1.jpg" class="news-card__img" alt="">
-                  <div class="news-card__title">Команда НьюТек Сервисез по мини‑футболу...</div>
-               </div>
-               <p class="news-card__subtitle">
-                  17 марта на крытом футбольном манеже «Олимп» в районе Новокосино состоялся очередной благотворительный турнир «Кубок Нефть и Газ ...
-               </p>
-            </div>
 
-            <div class="news__card">
-               <div class="news-card__date">11 марта 2019</div>
-               <div class="news-card__img-wrapper">
-                  <img src="./img/news_2.jpg" class="news-card__img" alt="">
-                  <div class="news-card__title">В Минусинске успешно выполнены ...</div>
+         <div class="news__swiper-container">
+            <div class="swiper-wrapper">
+               <div class="swiper-slide news__card">
+                  <div class="news-card__date">18 апреля 2019</div>
+                  <div class="news-card__img-wrapper">
+                     <img src="./img/news_1.jpg" class="news-card__img" alt="">
+                     <div class="news-card__title">Команда НьюТек Сервисез по мини‑футболу...</div>
+                  </div>
+                  <p class="news-card__subtitle">
+                     17 марта на крытом футбольном манеже «Олимп» в районе Новокосино состоялся очередной благотворительный турнир
+                     «Кубок Нефть и Газ ...
+                  </p>
                </div>
-               <p class="news-card__subtitle">
-                  В апреле текущего года по договору между компаниями «НьюТек Сервисез» и «ГЕОТЕК Сейсморазведка», одной из крупнейших в
-                  мире...
-               </p>
-            </div>
 
-            <div class="news__card">
-               <div class="news-card__date">8 марта 2019</div>
-               <div class="news-card__img-wrapper">
-                  <img src="./img/news_3.jpg" class="news-card__img" alt="">
-                  <div class="news-card__title"></div>
+               <div class="swiper-slide news__card">
+                  <div class="news-card__date">11 марта 2019</div>
+                  <div class="news-card__img-wrapper">
+                     <img src="./img/news_2.jpg" class="news-card__img" alt="">
+                     <div class="news-card__title">В Минусинске успешно выполнены ...</div>
+                  </div>
+                  <p class="news-card__subtitle">
+                     В апреле текущего года по договору между компаниями «НьюТек Сервисез» и «ГЕОТЕК Сейсморазведка», одной из
+                     крупнейших в
+                     мире...
+                  </p>
                </div>
-               <p class="news-card__subtitle">
-                  В апреле в Перми НьюТек Сервисез запустило один из первых заводов в России по производству набухающих пакеров –
-                  надежного, безопасного и ...
-               </p>
+
+               <div class="swiper-slide news__card">
+                  <div class="news-card__date">8 марта 2019</div>
+                  <div class="news-card__img-wrapper">
+                     <img src="./img/news_3.jpg" class="news-card__img" alt="">
+                     <div class="news-card__title">Запуск завода в Перми</div>
+                  </div>
+                  <p class="news-card__subtitle">
+                     В апреле в Перми НьюТек Сервисез запустило один из первых заводов в России по производству набухающих пакеров –
+                     надежного, безопасного и ...
+                  </p>
+               </div>
+
+               <div class="swiper-slide news__card">
+                  <div class="news-card__date">5 марта 2019</div>
+                  <div class="news-card__img-wrapper">
+                     <img src="./img/news_4.jpg" class="news-card__img" alt="">
+                     <div class="news-card__title">Роторный экскаватор</div>
+                  </div>
+                  <p class="news-card__subtitle">
+                     В феврале в Омске НьюТек Сервисез запустило один из первых роторный экскаваторов на ядерном реакторе в России.
+                  </p>
+               </div>
+
+               <div class="swiper-slide news__card">
+                  <div class="news-card__date">2 марта 2019</div>
+                  <div class="news-card__img-wrapper">
+                     <img src="./img/news_5.jpg" class="news-card__img" alt="">
+                     <div class="news-card__title">Роторный робот-экскаватор пожрал...</div>
+                  </div>
+                  <p class="news-card__subtitle">
+                     В феврале в ████ НьюТек Сервисез ████████ один из ████-роботов на топливе в ████, в последствии...
+                  </p>
+               </div>
             </div>
          </div>
+         
+         <!-- <div class="news__wrapper"></div> -->
       </section>
 
       <section class="reqform">
@@ -199,36 +229,40 @@
          <form class="reqform__form" action="" method="post">
 
             <div class="reqform__field reqform__field_100">
-               <input class="reqform__input" id="name" type="text" placeholder="Name">
+               <input class="reqform__input" id="name" type="text" placeholder="Name"
+               maxlength="30" pattern="^[а-яА-ЯёЁa-zA-Z-\-]+$" required>
                <!-- <label class="" for="name">Name</label> -->
             </div>
 
             <div class="reqform__field reqform__field_50">
-               <input class="reqform__input" id="company" type="text" placeholder="Company">
+               <input class="reqform__input" id="company" type="text" placeholder="Company"
+               maxlength="30" required>
             </div>
 
-            <div class="reqform__field reqform__field_50 reqform__field_offset align-right">
-               <select class="reqform__input" name="" id="name">
+            <div class="reqform__field reqform__field_50 reqform__field_offset align-right" required>
+               <select class="reqform__input" name="">
                   <option>Business Segment</option>
                   <option>Business Segment</option>
                </select>
             </div>
 
             <div class="reqform__field reqform__field_50">
-               <input class="reqform__input" id="company" type="email" placeholder="Email">
+               <input class="reqform__input" id="company" type="email" placeholder="Email" required>
             </div>
 
-            <div class="reqform__field reqform__field_50 reqform__field_offset">
-               <input class="reqform__input" id="name" type="tel" placeholder="Phone number">
+            <div class="reqform__field reqform__field_50 reqform__field_offset input-phone">
+               <input class="reqform__input" type="tel" placeholder="Phone number"
+               maxlength="20" pattern="^[0-9-\(\)]+$" required>
             </div>
 
             <div class="reqform__field reqform__field_100">
-               <input class="reqform__input" id="name" type="text" placeholder="Комментарий">
+               <input class="reqform__input" type="text" placeholder="Комментарий"
+               maxlength="1000">
                <!-- <label class="" for="name">Name</label> -->
             </div>
 
             <div class="reqform__field reqform__field_50 clear-border">
-               <input class="reqform__checkbox-box" id="checkbox" type="checkbox">
+               <input class="reqform__checkbox-box" id="checkbox" type="checkbox" required>
                <label class="reqform__checkbox-label" for="checkbox">I give consent for my personal data to be processed</label>
             </div>
 
@@ -287,6 +321,8 @@
 
    </footer>
 
+   <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
+   <!-- <script src="./js/validate.min.js"></script> -->
    <script src="./js/index.js"></script>
    <script src='https://api.mapbox.com/mapbox-gl-js/v1.8.0/mapbox-gl.js'></script>
    <script src="./js/mapbox.js"></script>

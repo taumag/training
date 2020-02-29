@@ -19,10 +19,18 @@
       line-height: 39px;
    }
 
-   &__field {
-      position: relative;
+   select {
       border-bottom: 2px solid $txtColor;
+   }
+
+   input {
       margin-bottom: 65px;
+      border-bottom: 2px solid $txtColor;
+   }
+
+   &__field {
+      // position: relative;
+      // margin-bottom: 65px;
    }
    .clear-border {
       border-bottom: none;

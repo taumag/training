@@ -3,6 +3,7 @@
    height: 1120px;
    width: 100%;
    padding-top: 180px;
+   // padding-left: 318px;
 
    &__title {
       color: $txtColor;
@@ -11,19 +12,21 @@
       font-size: 45px;
       line-height: 63px;
    }
-
-   &__wrapper {
-      width: 1760px;
-      height: 618px;
-      margin-left: 318px;
-      display: flex;
-   }
-
+   
    &__card {
       width: 604px;
       height: 442px;
-      margin-right: 40px;
    }
+}
+
+   .news__swiper-container {
+      width: 95%;
+      // padding-left: 318px;
+   }
+
+.swiper-slide:first-child {
+   // margin-left: 318px;
+   // padding-left: 318px;
 }
 
 .news-card {
@@ -38,8 +41,8 @@
 
    &__img-wrapper {
       position: relative;
-      width: 560px;
-      height: 390px;
+      width: 29.17vw;
+      height: 20.31vw;
       overflow: hidden;
       margin-bottom: 60px;
    }

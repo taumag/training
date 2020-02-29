@@ -1,0 +1,11 @@
+input:invalid {
+   outline:none;
+   box-shadow:none;
+   -moz-box-shadow:none;
+   -webkit-box-shadow:none;
+   border-bottom: 2px solid #FF1F00;
+}
+
+input:focus {
+   border-bottom: 2px solid $mainColor1;
+}
